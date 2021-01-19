@@ -1,4 +1,17 @@
-.Pokedex {
+.Pokedex-container {
   display: flex;
+  flex-direction: column;
 }
 
+.Pokedex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 1360px;
+}
+
+.Pokedex-header {
+  color: lightgray;
+}

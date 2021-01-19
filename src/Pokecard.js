@@ -1,3 +1,4 @@
+import "./Pokecard.css";
 
 /** 
  * Pokecard: A single Pokemon card detail
@@ -15,8 +16,8 @@
 
 function Pokecard({ id, name, type, baseExperience }) {
   return (
-    <div>
-      <h3>{ name }</h3>
+    <div className="Pokecard">
+      <h3 className="Pokecard-header">{ name }</h3>
       <img 
         src={ `${POKE_BASE_URL}/${id}.png` } 
         alt={ name }

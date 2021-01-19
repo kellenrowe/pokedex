@@ -1,0 +1,10 @@
+.Pokecard {
+  background-color: #909090;
+  text-align: center;
+  margin: 20px;
+  width: 18%;
+}
+
+.Pokecard-header {
+  color: blue;
+}

@@ -1,4 +1,7 @@
+import "./Pokedex.css";
+
 import Pokecard from "./Pokecard";
+
 
 const POKEMONS = [
   { id: 4, name: "Charmander", type: "fire", base_experience: 62 },
@@ -23,13 +26,16 @@ const POKEMONS = [
 function Pokedex({ pokemons }) {
 
   return (
-    <div>
-      { pokemons.map( ({ id, name, type, base_experience }) => <Pokecard 
-        id={id}
-        name={name}
-        type={type}
-        baseExperience={base_experience}
-        />)}
+    <div className="Pokedex-container">
+      <h2 className="Pokedex-header">Pokedex</h2>      
+      <div className="Pokedex">
+        { pokemons.map( ({ id, name, type, base_experience }) => <Pokecard 
+          id={id}
+          name={name}
+          type={type}
+          baseExperience={base_experience}
+          />)}
+      </div>
     </div>
   )
 }
