@@ -1,9 +1,26 @@
 
+/** 
+ * Pokecard: A single Pokemon card detail
+ * 
+ * Props: {
+ * - id (int)
+ * - name (String)
+ * - type (String)
+ * - baseExperience (int)
+ * }
+ **/  
+
+ const POKE_BASE_URL =
+   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
+
 function Pokecard({ id, name, type, baseExperience }) {
   return (
     <div>
-      <h3>{ name}</h3>
-      <img src={ `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png` } alt={ name}></img>
+      <h3>{ name }</h3>
+      <img 
+        src={ `${POKE_BASE_URL}/${id}.png` } 
+        alt={ name }
+      />
       <p>Type: {type}</p>
       <p>Experience: {baseExperience} </p>
 
