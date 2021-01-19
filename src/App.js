@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Pokedex from "./Pokedex";
+import Pokegame from "./Pokegame";
 
 
 /** 
- * Renders a single Pokedex 
+ * Renders a single Pokegame 
  **/  
 
 function App() {
   return (
     <div className="App">
-      <Pokedex />
+      <Pokegame />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import "./Pokedex.css";
-
 import Pokecard from "./Pokecard";
 
 
@@ -20,14 +19,14 @@ const POKEMONS = [
  * Props: {
  * - pokemons:  array, like 
  *      [{id: 5, name: "Charmander", type="fire", base_experience: 62 }...]
+ * - isWinner: a string like either: "you win" or "you lose"
  * }
  **/  
 
-function Pokedex({ pokemons }) {
+function Pokedex({ pokemons, isWinner }) {
 
   return (
     <div className="Pokedex-container">
-      <h2 className="Pokedex-header">Pokedex</h2>      
       <div className="Pokedex">
         { pokemons.map( ({ id, name, type, base_experience }) => <Pokecard 
           id={id}
@@ -36,6 +35,7 @@ function Pokedex({ pokemons }) {
           baseExperience={base_experience}
           />)}
       </div>
+      <h2 className="Pokedex-header">{isWinner}</h2>      
     </div>
   )
 }
@@ -45,3 +45,4 @@ Pokedex.defaultProps = {
 };
 
 export default Pokedex;
+export { POKEMONS }
